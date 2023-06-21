@@ -27,7 +27,8 @@ Data/Dataset/*
 *.json
 *.odf
 *.ods
-*.parquet*.ipynb
+*.parquet
+*.ipynb
 *.jpg
 *.png
 *.mp4
