@@ -31,7 +31,9 @@ def main(architecture_name: str, model_name: str, model_directory: str):
     experiment.log_model(name=full_model_name, file_or_folder=model_directory)
 
     # Register model
-    experiment.register_model(model_name=full_model_name, public=False)
+    experiment.register_model(
+        model_name=full_model_name, public=False, tags=["sound-api"], status="Staging"
+    )
 
     # End experiment
     experiment.end()
