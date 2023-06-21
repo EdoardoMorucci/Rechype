@@ -26,6 +26,10 @@ def main(architecture_name: str, model_name: str, model_directory: str):
 
     # Start experiment logging
     experiment = Experiment(api_key=COMET_API_KEY, project_name=project_name)
+    
+    # Fix model directory if necessary
+    if model_directory[-1] == "/":
+        model_directory = model_directory[:-1]
 
     # Log model
     experiment.log_model(name=full_model_name, file_or_folder=model_directory)
