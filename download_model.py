@@ -20,7 +20,7 @@ def main(model_name: str, saving_directory: str, version: str = None):
 
     # Create the api
     api = API(api_key=COMET_API_KEY)
-    
+
     # Create target directory if it does not exist
     os.makedirs(saving_directory, exist_ok=True)
 
