@@ -76,10 +76,10 @@ def main(
         index_to_label=index_to_label,
         threshold=threshold,
     )
-
+    
     # Get predictions and ground truths
-    predictions = np.vstack(results["predictions"].to_numpy())
-    ground_truths = np.vstack(results["ground_truths"].to_numpy())
+    predictions = np.vstack(results["predictions"])
+    ground_truths = np.vstack(results["ground_truths"])
 
     # Compute the f1 scores
     f1 = f1_score(
